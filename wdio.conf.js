@@ -21,6 +21,8 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
+        './test/Q1.Test.js',
+        './test/Q2.Test.js',
         './test/Q3.Test.js'
 
         // ToDo: define location for spec files here
@@ -51,10 +53,24 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
+capabilities: [
+  {
     browserName: 'MicrosoftEdge',
-    acceptInsecureCerts: true
-}],
+    acceptInsecureCerts: true,
+    specs: ['./test/Q2.Test.js']
+  },
+  {
+    browserName: 'chrome',
+    acceptInsecureCerts: true,
+    specs: ['./test/Q1.Test.js']
+  },
+  {
+    browserName: 'firefox',
+    acceptInsecureCerts: true,
+    specs: ['./test/Q3.Test.js']
+  }
+],
+
 
 
     //
